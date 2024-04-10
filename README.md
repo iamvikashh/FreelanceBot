@@ -7,19 +7,6 @@ Freelance Jobs Notifier is a Python script designed to periodically fetch new pr
 ---
 
 ## 🍰 Features
-
-#### [Feb 23, 2024]
-
-- WebApp in Any Chat.
-
-#### [Jan 15, 2024]
-
-- Now you can generate an offer from the description of each job with the help of AI.
-- User friendly Telegram Web App to view the generated offers in bot chat.
-- PremiumUsers, Unlimited Generates and etc.
-
-#### [Sep 12, 2023]
-
 - Fetches new [project/job]s based on specified categories.
 - Sends project notifications to a Telegram group.
 - Uses the Apscheduler library for job scheduling.
