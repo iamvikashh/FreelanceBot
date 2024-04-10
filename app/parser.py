@@ -105,12 +105,14 @@ async def get_upwork_jobs(bot: Bot, config: Settings):
             thId = 324
         elif "Web Design" in data["category"] or 'CMS Development' in data["category"]:
             thId = 173
-        elif "Front-End Development" in data["category"]:
-            thId = 231
-
+        elif "Front-End" in data["category"] or  "React" in data["category"] or "Next" in data["category"]:
+            thId = 231   
+        else : 
+            if 'console' in html.quote(feed.title) or 'google play' in html.quote(feed.title) :
+                continue
         
-
-
+        if thId is 197:
+            continue
         await bot.send_message(
             chat_id=config.tg_topic_id, text=text,
             message_thread_id=thId,
@@ -120,6 +122,8 @@ async def get_upwork_jobs(bot: Bot, config: Settings):
                 data=btn_data
             )
         )
+
+        
 
         await asyncio.sleep(random.choice([1, 2, 3]))
 
