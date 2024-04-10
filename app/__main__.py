@@ -64,7 +64,7 @@ async def on_startup(
     await bot.set_webhook(webhook_url)
 
     scheduler.add_job(
-        get_upwork_jobs, 'interval', minutes=2,
+        get_upwork_jobs, 'interval', minutes=5,
         kwargs={'bot': bot, 'config': config}
     )
     # scheduler.add_job(
